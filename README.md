@@ -68,9 +68,21 @@ The database follows a relational marketplace model connecting customers, orders
 
 The **Entity Relationship Diagram (ERD)** below illustrates the table schemas, key fields, and relationships used throughout the analysis.
 
-<p align="center">
-  <img src="ERD/marketplace_erd.png" alt="E-Commerce Marketplace Entity Relationship Diagram" width="100%">
-</p>
+![E-Commerce Marketplace Entity Relationship Diagram](./marketplace_erd.png)
+
+### Core Relationship Structure
+
+```text
+customers
+    │
+    └──< orders >── sellers
+           │
+           └──< order_items >── products >── category
+                                  │
+                                  └── inventory
+
+orders ─── payments
+orders ─── shipping
 
 ### Core Relationship Structure
 
